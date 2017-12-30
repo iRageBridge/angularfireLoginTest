@@ -1,0 +1,7 @@
+<section class="register-container">
+    <h1>Register Here</h1><br/>
+    <form autocomplete="off" novalidate [formGroup] = "form" (submit)="register()">
+      <input type="email" name="user" placeholder="Email Address" formControlName="email">
+      <input type="password" name="pass" placeholder="Password" formControlName="password">
+      <input type="submit" name="register" class="loginmodal-submit" value="Register">
+    </form>

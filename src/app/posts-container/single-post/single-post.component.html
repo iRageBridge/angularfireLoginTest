@@ -1,0 +1,16 @@
+<h3>Blog Posts</h3>
+<section class="wrapped jumboron" *ngIf="postsList | async as posts else postsLoading">
+  <div *ngFor="let post of postsList | async" class="bs-callout bs-calout-info">
+    <h4><a href="'/posts/' + post+$key">{{post.post_title}}</a></h4>
+      <p>
+        <a [href]="'/users/' + post.user">{{post.user}}</a>
+          <small> {{post.date | date}} </small>
+      </p>
+  </div>
+</section>
+
+<ng-template #postsLoading>
+  <div>
+    Loading...
+  </div>
+</ng-template>
