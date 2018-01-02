@@ -26,10 +26,10 @@ export class UserProfileComponent implements OnInit {
       .switchMap(params => this.postsService.findUserByUsername(params['username']))
       .publishReplay().refCount();
 
-    this.user$.subscribe(user => this.getPosts(user.$key));
+    //this.user$.subscribe(user => this.getPosts(user.$key));
   }
 
-  getPosts(userKey) {
+  /*getPosts(userKey) {
     this.postsPaginationService.loadFirstPage(userKey);
   }
   nextPosts() {
@@ -37,6 +37,6 @@ export class UserProfileComponent implements OnInit {
   }
   prevPosts() {
     this.postsPaginationService.loadPrevPage();
-  }
+  }*/
 
 }

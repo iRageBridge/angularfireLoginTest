@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {PostsService} from "./posts.service";
-import {FirebaseListFactoryOpts} from "angularfire2/interfaces";
+//import {FirebaseListFactoryOpts} from "angularfire2/interfaces";
 import {Observable} from "rxjs/Observable";
 import {Post} from "../model/post";
 import {BehaviorSubject} from "rxjs/BehaviorSubject";
@@ -26,7 +26,7 @@ export class PostsPaginationService {
 
   constructor(private postsService: PostsService) { }
 
-  getPosts(userKey, query: FirebaseListFactoryOpts) {
+  /*getPosts(userKey, query: FirebaseListFactoryOpts) {
     this.postsService.getPostsByUserKey(userKey, query)
       .subscribe(posts => {
         this.lastPostKey = posts[posts.length - 1].$key;
@@ -61,5 +61,5 @@ export class PostsPaginationService {
         orderByKey: true,
         endAt: this.firstPostKey
       }});
-  }
+  }*/
 }
