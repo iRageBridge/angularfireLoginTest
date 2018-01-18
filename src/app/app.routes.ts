@@ -22,5 +22,5 @@ export const ROUTES: Route[] =[
     {path: 'home', component: HomeComponent},
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegisterComponent},
-    {path: '', redirectTo: 'posts', pathMatch: 'full'}
+    {path: '', redirectTo: 'login', pathMatch: 'full'}
 ];
