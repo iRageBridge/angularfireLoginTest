@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "../shared/auth/auth.service";
 import {Router} from "@angular/router";
+import * as firebase from "firebase";
 
 @Component({
   selector: 'app-login',
@@ -27,11 +28,11 @@ export class LoginComponent implements OnInit {
 
   loginWithGoogle() {
     this.authService.loginWithGoogle();
+    this.router.navigate(['/posts']);
   }
 
   login() {
     const inputValue = this.form.value;
-    console.log(inputValue.email, inputValue.password);
 
     this.authService.login(inputValue.email, inputValue.password)
       .subscribe(
